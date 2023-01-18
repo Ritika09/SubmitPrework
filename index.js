@@ -181,20 +181,20 @@ descriptionContainer.append(new_ele);
 const firstGameContainer = document.getElementById("first-game");
 const secondGameContainer = document.getElementById("second-game");
 
-const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
-    return item2.pledged - item1.pledged;
+const bestGames =  GAMES_JSON.sort( (game1, game2) => {
+    return game2.pledged - game1.pledged;
 });
 
 // use destructuring and the spread operator to grab the first and second games
-const [firstGame, secondGame, ...others] = sortedGames;
+const [bestGame1, bestGame2, ...others] = bestGames;
 // create a new element to hold the name of the top pledge game, then append it to the correct element
-let first = document.createElement("div");
-first.innerHTML = `<p>${firstGame.name}</p>`
-firstGameContainer.append(first);
+let best1 = document.createElement("div");
+best1.innerHTML = `<p>${bestGame1.name}</p>`
+firstGameContainer.append(best1);
 // do the same for the runner up item
-let second = document.createElement("div");  
-second.innerHTML = `<p>${secondGame.name}</p>`;
-secondGameContainer.append(second);
+let best2 = document.createElement("div");  
+best2.innerHTML = `<p>${bestGame2.name}</p>`;
+secondGameContainer.append(best2);
 
-console.log(firstGame.name)
-console.log(secondGame.name)
+console.log(bestGame1.name)
+console.log(bestGame2.name)
