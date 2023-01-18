@@ -80,5 +80,5 @@ button {
     border-radius: 7px;
 }
 button:hover{
-    box-shadow: 0 0 30px yellowgreen;
+    box-shadow: 0 0 30px rgb(50, 205, 50);
 }

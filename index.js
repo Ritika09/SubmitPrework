@@ -195,6 +195,6 @@ firstGameContainer.append(best1);
 let best2 = document.createElement("div");  
 best2.innerHTML = `<p>${bestGame2.name}</p>`;
 secondGameContainer.append(best2);
-// Top two games retrieving
+
 console.log(bestGame1.name)
 console.log(bestGame2.name)
